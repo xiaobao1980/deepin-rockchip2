@@ -1,0 +1,1 @@
+# deepin-rockchip2
