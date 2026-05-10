@@ -1,0 +1,11 @@
+# APT Pinning for Testing Repository
+# Ensures stable packages take priority over testing
+# Prevents unintended upgrades to testing packages
+
+Package: *
+Pin: release a=unstable/crimson
+Pin-Priority: 100
+
+Package: *
+Pin: release a=crimson
+Pin-Priority: 900
