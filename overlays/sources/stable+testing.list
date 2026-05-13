@@ -1,0 +1,8 @@
+# Deepin 25 Stable + Testing
+# Combines stable base with testing updates (testing pinned lower priority)
+
+deb https://community-packages.deepin.com/beige/ crimson main commercial community
+#deb-src https://community-packages.deepin.com/beige/ crimson main commercial community
+
+deb https://proposed-packages.deepin.com/beige-testing/ unstable/crimson main community commercial
+#deb-src https://proposed-packages.deepin.com/beige-testing/ unstable/crimson main community commercial

@@ -185,10 +185,11 @@ sudo ./build.sh -b rock-5b -m compat
 
 ## 添加新开发板
 
-1. 在 `boards/` 中创建新的开发板配置：
+1. 在 `boards/` 中创建新的开发板配置目录：
 
 ```bash
-cp boards/generic-rk3568.conf boards/myboard.conf
+mkdir boards/myboard
+cp boards/generic-rk3568/board.conf boards/myboard/board.conf
 ```
 
 2. 编辑配置，填入开发板的特定参数：
@@ -239,25 +240,45 @@ ls rkbin/bin/rk35/
 deepin-rockchip-builder/
 ├── build.sh              # 主构建脚本
 ├── boards/               # 开发板配置
-│   ├── orangepi-5-plus.conf
-│   ├── orangepi-5.conf
-│   ├── orangepi-3b.conf
-│   ├── rock-5b.conf
-│   ├── rock-5a.conf
-│   ├── nanopi-r5c.conf
-│   ├── nanopi-r5s.conf
-│   ├── rock-3a.conf
-│   ├── nanopc-t6.conf
-│   ├── generic-rk3588.conf
-│   ├── generic-rk3588s.conf
-│   ├── generic-rk3568.conf
-│   ├── generic-rk3566.conf
-│   └── generic-rk3399.conf
+│   ├── orangepi-5-plus/
+│   │   └── board.conf
+│   ├── orangepi-5/
+│   │   └── board.conf
+│   ├── orangepi-3b/
+│   │   └── board.conf
+│   ├── rock-5b/
+│   │   └── board.conf
+│   ├── rock-5a/
+│   │   └── board.conf
+│   ├── rock-5-itx/
+│   │   └── board.conf
+│   ├── nanopi-r5c/
+│   │   └── board.conf
+│   ├── nanopi-r5s/
+│   │   └── board.conf
+│   ├── rock-3a/
+│   │   └── board.conf
+│   ├── nanopc-t6/
+│   │   └── board.conf
+│   ├── generic-rk3588/
+│   │   └── board.conf
+│   ├── generic-rk3588s/
+│   │   └── board.conf
+│   ├── generic-rk3568/
+│   │   └── board.conf
+│   ├── generic-rk3566/
+│   │   └── board.conf
+│   ├── generic-rk3576/
+│   │   └── board.conf
+│   └── generic-rk3399/
+│       └── board.conf
 ├── scripts/              # 构建脚本
 │   ├── build-rootfs.sh   # 根文件系统创建
 │   ├── build-uboot.sh    # U-Boot + TF-A 编译
 │   ├── build-kernel.sh   # Linux 内核编译
 │   ├── setup-system.sh   # 系统配置
+│   ├── setup-hardware-acc.sh  # 硬件加速配置
+│   ├── setup-sources.sh  # 软件源配置
 │   └── pack-image.sh     # 镜像打包
 ├── overlays/             # 自定义 DT 叠加层
 ├── kernel-configs/       # 开发板专用内核配置

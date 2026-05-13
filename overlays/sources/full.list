@@ -1,0 +1,13 @@
+# Deepin 25 Full Repository Set
+# Includes: Stable + Testing + HWE + Ports
+# Maximum package availability for development and testing
+# WARNING: Testing repository may contain unstable packages
+
+deb https://community-packages.deepin.com/beige/ crimson main commercial community
+#deb-src https://community-packages.deepin.com/beige/ crimson main commercial community
+
+deb https://proposed-packages.deepin.com/beige-testing/ unstable/crimson main community commercial
+#deb-src https://proposed-packages.deepin.com/beige-testing/ unstable/crimson main community commercial
+
+deb https://community-packages.deepin.com/hwe-25/ unstable main community commercial
+#deb-src https://community-packages.deepin.com/hwe-25/ unstable main community commercial
