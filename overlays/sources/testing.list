@@ -1,7 +1,0 @@
-# Deepin 25 Testing Repository
-# Proposed/testing packages, may contain newer but less tested software
-# Use with caution - for developers and testers only
-# Components: main, community, commercial
-
-deb https://proposed-packages.deepin.com/beige-testing/ unstable/crimson main community commercial
-#deb-src https://proposed-packages.deepin.com/beige-testing/ unstable/crimson main community commercial

@@ -1,7 +1,0 @@
-# Deepin 25 HWE (Hardware Enablement) Repository
-# Provides newer kernel, Mesa drivers, and hardware support
-# Essential for: Intel Arc GPU, AMD RX 9000 series, new WiFi/BT chipsets
-# Architecture: amd64, arm64, loong64, riscv64
-
-deb https://community-packages.deepin.com/hwe-25/ unstable main community commercial
-#deb-src https://community-packages.deepin.com/hwe-25/ unstable main community commercial

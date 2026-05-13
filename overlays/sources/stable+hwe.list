@@ -1,9 +1,0 @@
-# Deepin 25 Stable + HWE
-# Stable base with Hardware Enablement for latest drivers
-# Recommended for: RK3588 with new GPU, new WiFi/BT hardware
-
-deb https://community-packages.deepin.com/beige/ crimson main commercial community
-#deb-src https://community-packages.deepin.com/beige/ crimson main commercial community
-
-deb https://community-packages.deepin.com/hwe-25/ unstable main community commercial
-#deb-src https://community-packages.deepin.com/hwe-25/ unstable main community commercial
