@@ -1,0 +1,655 @@
+#------------------------------------------------------------------------------
+# 板卡配置数据库 (基于 armbian-build config/boards)
+# 覆盖 RK3566 / RK3568 / RK3576 / RK3588 / RK3399
+#------------------------------------------------------------------------------
+declare -A BOARD_DEFCONFIGS
+declare -A BOARD_PLATS
+declare -A BOARD_DDR_BLOBS
+declare -A BOARD_DESC
+
+# ======== RK3566 (四核 Cortex-A55, Mali-G52) ========
+BOARD_DEFCONFIGS[rk3566-generic]="generic-rk3566_defconfig"
+BOARD_PLATS[rk3566-generic]="rk3566"
+BOARD_DDR_BLOBS[rk3566-generic]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-generic]="RK3566 Generic"
+
+BOARD_DEFCONFIGS[rk3566-rock-3c]="rock-3c-rk3566_defconfig"
+BOARD_PLATS[rk3566-rock-3c]="rk3566"
+BOARD_DDR_BLOBS[rk3566-rock-3c]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-rock-3c]="Radxa Rock 3C"
+
+BOARD_DEFCONFIGS[rk3566-quartz64a]="quartz64-a-rk3566_defconfig"
+BOARD_PLATS[rk3566-quartz64a]="rk3566"
+BOARD_DDR_BLOBS[rk3566-quartz64a]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-quartz64a]="PINE64 Quartz64 Model A"
+
+BOARD_DEFCONFIGS[rk3566-quartz64b]="quartz64-b-rk3566_defconfig"
+BOARD_PLATS[rk3566-quartz64b]="rk3566"
+BOARD_DDR_BLOBS[rk3566-quartz64b]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-quartz64b]="PINE64 Quartz64 Model B"
+
+BOARD_DEFCONFIGS[rk3566-orangepi-3b]="orangepi-3b-rk3566_defconfig"
+BOARD_PLATS[rk3566-orangepi-3b]="rk3566"
+BOARD_DDR_BLOBS[rk3566-orangepi-3b]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-orangepi-3b]="Orange Pi 3B"
+
+BOARD_DEFCONFIGS[rk3566-luckfox-core3566]="luckfox-core3566-rk3566_defconfig"
+BOARD_PLATS[rk3566-luckfox-core3566]="rk3566"
+BOARD_DDR_BLOBS[rk3566-luckfox-core3566]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-luckfox-core3566]="Luckfox Core3566"
+
+BOARD_DEFCONFIGS[rk3566-h96-tvbox]="h96-tvbox-3566-rk3566_defconfig"
+BOARD_PLATS[rk3566-h96-tvbox]="rk3566"
+BOARD_DDR_BLOBS[rk3566-h96-tvbox]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-h96-tvbox]="H96 TV Box 3566"
+
+BOARD_DEFCONFIGS[rk3566-rk3566-box-demo]="rk3566-box-demo-rk3566_defconfig"
+BOARD_PLATS[rk3566-rk3566-box-demo]="rk3566"
+BOARD_DDR_BLOBS[rk3566-rk3566-box-demo]="rk3566_ddr_1056MHz_v1.21.bin"
+BOARD_DESC[rk3566-rk3566-box-demo]="RK3566 Box Demo"
+
+# ======== RK3568 (四核 Cortex-A55, Mali-G52) ========
+BOARD_DEFCONFIGS[rk3568-generic]="generic-rk3568_defconfig"
+BOARD_PLATS[rk3568-generic]="rk3568"
+BOARD_DDR_BLOBS[rk3568-generic]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-generic]="RK3568 Generic"
+
+BOARD_DEFCONFIGS[rk3568-rock-3a]="rock-3a-rk3568_defconfig"
+BOARD_PLATS[rk3568-rock-3a]="rk3568"
+BOARD_DDR_BLOBS[rk3568-rock-3a]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-rock-3a]="Radxa Rock 3A"
+
+BOARD_DEFCONFIGS[rk3568-nanopi-r5s]="nanopi-r5s-rk3568_defconfig"
+BOARD_PLATS[rk3568-nanopi-r5s]="rk3568"
+BOARD_DDR_BLOBS[rk3568-nanopi-r5s]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-nanopi-r5s]="FriendlyELEC NanoPi R5S"
+
+BOARD_DEFCONFIGS[rk3568-nanopi-r5c]="nanopi-r5c-rk3568_defconfig"
+BOARD_PLATS[rk3568-nanopi-r5c]="rk3568"
+BOARD_DDR_BLOBS[rk3568-nanopi-r5c]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-nanopi-r5c]="FriendlyELEC NanoPi R5C"
+
+BOARD_DEFCONFIGS[rk3568-nanopi-r3s]="nanopi-r3s-rk3568_defconfig"
+BOARD_PLATS[rk3568-nanopi-r3s]="rk3568"
+BOARD_DDR_BLOBS[rk3568-nanopi-r3s]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-nanopi-r3s]="FriendlyELEC NanoPi R3S"
+
+BOARD_DEFCONFIGS[rk3568-nanopi-r3s-lts]="nanopi-r3s-lts-rk3568_defconfig"
+BOARD_PLATS[rk3568-nanopi-r3s-lts]="rk3568"
+BOARD_DDR_BLOBS[rk3568-nanopi-r3s-lts]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-nanopi-r3s-lts]="FriendlyELEC NanoPi R3S LTS"
+
+BOARD_DEFCONFIGS[rk3568-nanopi-m5]="nanopi-m5-rk3568_defconfig"
+BOARD_PLATS[rk3568-nanopi-m5]="rk3568"
+BOARD_DDR_BLOBS[rk3568-nanopi-m5]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-nanopi-m5]="FriendlyELEC NanoPi M5"
+
+BOARD_DEFCONFIGS[rk3568-odroid-m1]="odroid-m1-rk3568_defconfig"
+BOARD_PLATS[rk3568-odroid-m1]="rk3568"
+BOARD_DDR_BLOBS[rk3568-odroid-m1]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-odroid-m1]="ODROID M1"
+
+BOARD_DEFCONFIGS[rk3568-odroid-m1s]="odroid-m1s-rk3568_defconfig"
+BOARD_PLATS[rk3568-odroid-m1s]="rk3568"
+BOARD_DDR_BLOBS[rk3568-odroid-m1s]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-odroid-m1s]="ODROID M1S"
+
+BOARD_DEFCONFIGS[rk3568-bananapi-m4zero]="bananapi-m4-zero-rk3568_defconfig"
+BOARD_PLATS[rk3568-bananapi-m4zero]="rk3568"
+BOARD_DDR_BLOBS[rk3568-bananapi-m4zero]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-bananapi-m4zero]="Banana Pi M4 Zero"
+
+BOARD_DEFCONFIGS[rk3568-bananapi-m4berry]="bananapi-m4-berry-rk3568_defconfig"
+BOARD_PLATS[rk3568-bananapi-m4berry]="rk3568"
+BOARD_DDR_BLOBS[rk3568-bananapi-m4berry]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-bananapi-m4berry]="Banana Pi M4 Berry"
+
+BOARD_DEFCONFIGS[rk3568-radxa-e25]="radxa-e25-rk3568_defconfig"
+BOARD_PLATS[rk3568-radxa-e25]="rk3568"
+BOARD_DDR_BLOBS[rk3568-radxa-e25]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-radxa-e25]="Radxa E25"
+
+BOARD_DEFCONFIGS[rk3568-radxa-e20c]="radxa-e20c-rk3568_defconfig"
+BOARD_PLATS[rk3568-radxa-e20c]="rk3568"
+BOARD_DDR_BLOBS[rk3568-radxa-e20c]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-radxa-e20c]="Radxa E20C"
+
+BOARD_DEFCONFIGS[rk3568-radxa-e24c]="radxa-e24c-rk3568_defconfig"
+BOARD_PLATS[rk3568-radxa-e24c]="rk3568"
+BOARD_DDR_BLOBS[rk3568-radxa-e24c]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-radxa-e24c]="Radxa E24C"
+
+BOARD_DEFCONFIGS[rk3568-hinlink-h28k]="hinlink-h28k-rk3568_defconfig"
+BOARD_PLATS[rk3568-hinlink-h28k]="rk3568"
+BOARD_DDR_BLOBS[rk3568-hinlink-h28k]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-hinlink-h28k]="Hinlink H28K"
+
+BOARD_DEFCONFIGS[rk3568-hinlink-h66k]="hinlink-h66k-rk3568_defconfig"
+BOARD_PLATS[rk3568-hinlink-h66k]="rk3568"
+BOARD_DDR_BLOBS[rk3568-hinlink-h66k]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-hinlink-h66k]="Hinlink H66K"
+
+BOARD_DEFCONFIGS[rk3568-hinlink-h68k]="hinlink-h68k-rk3568_defconfig"
+BOARD_PLATS[rk3568-hinlink-h68k]="rk3568"
+BOARD_DDR_BLOBS[rk3568-hinlink-h68k]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-hinlink-h68k]="Hinlink H68K"
+
+BOARD_DEFCONFIGS[rk3568-hinlink-h88k]="hinlink-h88k-rk3568_defconfig"
+BOARD_PLATS[rk3568-hinlink-h88k]="rk3568"
+BOARD_DDR_BLOBS[rk3568-hinlink-h88k]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-hinlink-h88k]="Hinlink H88K"
+
+BOARD_DEFCONFIGS[rk3568-hinlink-hnas]="hinlink-hnas-rk3568_defconfig"
+BOARD_PLATS[rk3568-hinlink-hnas]="rk3568"
+BOARD_DDR_BLOBS[rk3568-hinlink-hnas]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-hinlink-hnas]="Hinlink HNAS"
+
+BOARD_DEFCONFIGS[rk3568-hinlink-ht2]="hinlink-ht2-rk3568_defconfig"
+BOARD_PLATS[rk3568-hinlink-ht2]="rk3568"
+BOARD_DDR_BLOBS[rk3568-hinlink-ht2]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-hinlink-ht2]="Hinlink HT2"
+
+BOARD_DEFCONFIGS[rk3568-lckfb-taishanpi]="lckfb-taishanpi-rk3568_defconfig"
+BOARD_PLATS[rk3568-lckfb-taishanpi]="rk3568"
+BOARD_DDR_BLOBS[rk3568-lckfb-taishanpi]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-lckfb-taishanpi]="LCKFB TaiShan Pi"
+
+BOARD_DEFCONFIGS[rk3568-norco-emb-3531]="norco-emb-3531-rk3568_defconfig"
+BOARD_PLATS[rk3568-norco-emb-3531]="rk3568"
+BOARD_DDR_BLOBS[rk3568-norco-emb-3531]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-norco-emb-3531]="Norco EMB-3531"
+
+BOARD_DEFCONFIGS[rk3568-dusun-dsom-010r]="dusun-dsom-010r-rk3568_defconfig"
+BOARD_PLATS[rk3568-dusun-dsom-010r]="rk3568"
+BOARD_DDR_BLOBS[rk3568-dusun-dsom-010r]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-dusun-dsom-010r]="Dusun DSOM-010R"
+
+BOARD_DEFCONFIGS[rk3568-xiaobao-nas]="xiaobao-nas-rk3568_defconfig"
+BOARD_PLATS[rk3568-xiaobao-nas]="rk3568"
+BOARD_DDR_BLOBS[rk3568-xiaobao-nas]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-xiaobao-nas]="XiaoBao NAS"
+
+BOARD_DEFCONFIGS[rk3568-yy3568]="yy3568-rk3568_defconfig"
+BOARD_PLATS[rk3568-yy3568]="rk3568"
+BOARD_DDR_BLOBS[rk3568-yy3568]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-yy3568]="YY3568"
+
+BOARD_DEFCONFIGS[rk3568-9tripod-x3568-v4]="9tripod-x3568-v4-rk3568_defconfig"
+BOARD_PLATS[rk3568-9tripod-x3568-v4]="rk3568"
+BOARD_DDR_BLOBS[rk3568-9tripod-x3568-v4]="rk3568_ddr_1560MHz_v1.18.bin"
+BOARD_DESC[rk3568-9tripod-x3568-v4]="9tripod X3568 V4"
+
+# ======== RK3576 (四核A72+四核A53, Mali-G52 MC3) ========
+BOARD_DEFCONFIGS[rk3576-generic]="generic-rk3576_defconfig"
+BOARD_PLATS[rk3576-generic]="rk3576"
+BOARD_DDR_BLOBS[rk3576-generic]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-generic]="RK3576 Generic"
+
+BOARD_DEFCONFIGS[rk3576-evb]="evb-rk3576_defconfig"
+BOARD_PLATS[rk3576-evb]="rk3576"
+BOARD_DDR_BLOBS[rk3576-evb]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-evb]="RK3576 EVB"
+
+BOARD_DEFCONFIGS[rk3576-rock4d]="rock4d-rk3576_defconfig"
+BOARD_PLATS[rk3576-rock4d]="rk3576"
+BOARD_DDR_BLOBS[rk3576-rock4d]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-rock4d]="Radxa Rock 4D"
+
+BOARD_DEFCONFIGS[rk3576-armsom-sige5]="armsom-sige5-rk3576_defconfig"
+BOARD_PLATS[rk3576-armsom-sige5]="rk3576"
+BOARD_DDR_BLOBS[rk3576-armsom-sige5]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-armsom-sige5]="ArmSoM Sige5"
+
+BOARD_DEFCONFIGS[rk3576-armsom-sige3]="armsom-sige3-rk3576_defconfig"
+BOARD_PLATS[rk3576-armsom-sige3]="rk3576"
+BOARD_DDR_BLOBS[rk3576-armsom-sige3]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-armsom-sige3]="ArmSoM Sige3"
+
+BOARD_DEFCONFIGS[rk3576-armsom-sige1]="armsom-sige1-rk3576_defconfig"
+BOARD_PLATS[rk3576-armsom-sige1]="rk3576"
+BOARD_DDR_BLOBS[rk3576-armsom-sige1]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-armsom-sige1]="ArmSoM Sige1"
+
+BOARD_DEFCONFIGS[rk3576-dshanpi-a1]="dshanpi-a1-rk3576_defconfig"
+BOARD_PLATS[rk3576-dshanpi-a1]="rk3576"
+BOARD_DDR_BLOBS[rk3576-dshanpi-a1]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-dshanpi-a1]="DshanPi A1"
+
+BOARD_DEFCONFIGS[rk3576-dshanpi-r1]="dshanpi-r1-rk3576_defconfig"
+BOARD_PLATS[rk3576-dshanpi-r1]="rk3576"
+BOARD_DDR_BLOBS[rk3576-dshanpi-r1]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-dshanpi-r1]="DshanPi R1"
+
+BOARD_DEFCONFIGS[rk3576-radxa-e52c]="radxa-e52c-rk3576_defconfig"
+BOARD_PLATS[rk3576-radxa-e52c]="rk3576"
+BOARD_DDR_BLOBS[rk3576-radxa-e52c]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-radxa-e52c]="Radxa E52C"
+
+BOARD_DEFCONFIGS[rk3576-radxa-e54c]="radxa-e54c-rk3576_defconfig"
+BOARD_PLATS[rk3576-radxa-e54c]="rk3576"
+BOARD_DDR_BLOBS[rk3576-radxa-e54c]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-radxa-e54c]="Radxa E54C"
+
+BOARD_DEFCONFIGS[rk3576-youyeetoo-r1-v3]="youyeetoo-r1-v3-rk3576_defconfig"
+BOARD_PLATS[rk3576-youyeetoo-r1-v3]="rk3576"
+BOARD_DDR_BLOBS[rk3576-youyeetoo-r1-v3]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-youyeetoo-r1-v3]="Youyeetoo R1 V3"
+
+BOARD_DEFCONFIGS[rk3576-forlinx-ok3506-s12]="forlinx-ok3506-s12-rk3576_defconfig"
+BOARD_PLATS[rk3576-forlinx-ok3506-s12]="rk3576"
+BOARD_DDR_BLOBS[rk3576-forlinx-ok3506-s12]="rk3576_ddr_lp4_2112MHz_lp5_2736MHz_v1.08.bin"
+BOARD_DESC[rk3576-forlinx-ok3506-s12]="Forlinx OK3506 S12"
+
+# ======== RK3588 (四核A76+四核A55, Mali-G610) ========
+BOARD_DEFCONFIGS[rk3588-generic]="generic-rk3588_defconfig"
+BOARD_PLATS[rk3588-generic]="rk3588"
+BOARD_DDR_BLOBS[rk3588-generic]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-generic]="RK3588 Generic EVB"
+
+BOARD_DEFCONFIGS[rk3588-rock5b]="rock5b-rk3588_defconfig"
+BOARD_PLATS[rk3588-rock5b]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5b]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5b]="Radxa Rock 5B"
+
+BOARD_DEFCONFIGS[rk3588-rock5a]="rock5a-rk3588s_defconfig"
+BOARD_PLATS[rk3588-rock5a]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5a]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5a]="Radxa Rock 5A"
+
+BOARD_DEFCONFIGS[rk3588-rock5c]="rock-5c-rk3588s_defconfig"
+BOARD_PLATS[rk3588-rock5c]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5c]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5c]="Radxa Rock 5C"
+
+BOARD_DEFCONFIGS[rk3588-rock5b-plus]="rock-5b-plus-rk3588_defconfig"
+BOARD_PLATS[rk3588-rock5b-plus]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5b-plus]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5b-plus]="Radxa Rock 5B Plus"
+
+BOARD_DEFCONFIGS[rk3588-rock5-itx]="rock-5-itx-rk3588_defconfig"
+BOARD_PLATS[rk3588-rock5-itx]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5-itx]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5-itx]="Radxa Rock 5 ITX"
+
+BOARD_DEFCONFIGS[rk3588-rock5-cmio]="rock-5-cmio-rk3588_defconfig"
+BOARD_PLATS[rk3588-rock5-cmio]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5-cmio]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5-cmio]="Radxa Rock 5 CMIO"
+
+BOARD_DEFCONFIGS[rk3588-rock5-cm-rpi-cm4-io]="rock-5-cm-rpi-cm4-io-rk3588s_defconfig"
+BOARD_PLATS[rk3588-rock5-cm-rpi-cm4-io]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5-cm-rpi-cm4-io]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5-cm-rpi-cm4-io]="Radxa Rock 5 CM + RPI CM4 IO"
+
+BOARD_DEFCONFIGS[rk3588-rock5t]="rock-5t-rk3588_defconfig"
+BOARD_PLATS[rk3588-rock5t]="rk3588"
+BOARD_DDR_BLOBS[rk3588-rock5t]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-rock5t]="Radxa Rock 5T"
+
+BOARD_DEFCONFIGS[rk3588-opi5]="orangepi-5-rk3588_defconfig"
+BOARD_PLATS[rk3588-opi5]="rk3588"
+BOARD_DDR_BLOBS[rk3588-opi5]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-opi5]="Orange Pi 5"
+
+BOARD_DEFCONFIGS[rk3588-opi5plus]="orangepi-5-plus-rk3588_defconfig"
+BOARD_PLATS[rk3588-opi5plus]="rk3588"
+BOARD_DDR_BLOBS[rk3588-opi5plus]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-opi5plus]="Orange Pi 5 Plus"
+
+BOARD_DEFCONFIGS[rk3588-opi5-ultra]="orangepi-5-ultra-rk3588_defconfig"
+BOARD_PLATS[rk3588-opi5-ultra]="rk3588"
+BOARD_DDR_BLOBS[rk3588-opi5-ultra]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-opi5-ultra]="Orange Pi 5 Ultra"
+
+BOARD_DEFCONFIGS[rk3588-opi5-max]="orangepi-5-max-rk3588_defconfig"
+BOARD_PLATS[rk3588-opi5-max]="rk3588"
+BOARD_DDR_BLOBS[rk3588-opi5-max]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-opi5-max]="Orange Pi 5 Max"
+
+BOARD_DEFCONFIGS[rk3588-opi5b]="orangepi-5b-rk3588_defconfig"
+BOARD_PLATS[rk3588-opi5b]="rk3588"
+BOARD_DDR_BLOBS[rk3588-opi5b]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-opi5b]="Orange Pi 5B"
+
+BOARD_DEFCONFIGS[rk3588-opi5pro]="orangepi-5-pro-rk3588_defconfig"
+BOARD_PLATS[rk3588-opi5pro]="rk3588"
+BOARD_DDR_BLOBS[rk3588-opi5pro]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-opi5pro]="Orange Pi 5 Pro"
+
+BOARD_DEFCONFIGS[rk3588-orangepi-4a]="orangepi-4a-rk3588s_defconfig"
+BOARD_PLATS[rk3588-orangepi-4a]="rk3588"
+BOARD_DDR_BLOBS[rk3588-orangepi-4a]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-orangepi-4a]="Orange Pi 4A"
+
+BOARD_DEFCONFIGS[rk3588-orangepi-4-lts]="orangepi-4-lts-rk3399_defconfig"
+BOARD_PLATS[rk3588-orangepi-4-lts]="rk3588"
+BOARD_DDR_BLOBS[rk3588-orangepi-4-lts]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-orangepi-4-lts]="Orange Pi 4 LTS"
+
+BOARD_DEFCONFIGS[rk3588-cm3588]="cm3588-nas-rk3588_defconfig"
+BOARD_PLATS[rk3588-cm3588]="rk3588"
+BOARD_DDR_BLOBS[rk3588-cm3588]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-cm3588]="CM3588 NAS"
+
+BOARD_DEFCONFIGS[rk3588-coolpi4b]="coolpi-4b-rk3588s_defconfig"
+BOARD_PLATS[rk3588-coolpi4b]="rk3588"
+BOARD_DDR_BLOBS[rk3588-coolpi4b]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-coolpi4b]="CoolPi 4B"
+
+BOARD_DEFCONFIGS[rk3588-coolpi-cm5]="coolpi-cm5-rk3588_defconfig"
+BOARD_PLATS[rk3588-coolpi-cm5]="rk3588"
+BOARD_DDR_BLOBS[rk3588-coolpi-cm5]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-coolpi-cm5]="CoolPi CM5"
+
+BOARD_DEFCONFIGS[rk3588-coolpi-genbook]="coolpi-genbook-rk3588_defconfig"
+BOARD_PLATS[rk3588-coolpi-genbook]="rk3588"
+BOARD_DDR_BLOBS[rk3588-coolpi-genbook]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-coolpi-genbook]="CoolPi GenBook"
+
+BOARD_DEFCONFIGS[rk3588-sige7]="armsom-sige7-rk3588_defconfig"
+BOARD_PLATS[rk3588-sige7]="rk3588"
+BOARD_DDR_BLOBS[rk3588-sige7]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-sige7]="ArmSoM Sige7"
+
+BOARD_DEFCONFIGS[rk3588-nanopi-r6s]="nanopi-r6s-rk3588s_defconfig"
+BOARD_PLATS[rk3588-nanopi-r6s]="rk3588"
+BOARD_DDR_BLOBS[rk3588-nanopi-r6s]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-nanopi-r6s]="FriendlyELEC NanoPi R6S"
+
+BOARD_DEFCONFIGS[rk3588-nanopi-r6c]="nanopi-r6c-rk3588s_defconfig"
+BOARD_PLATS[rk3588-nanopi-r6c]="rk3588"
+BOARD_DDR_BLOBS[rk3588-nanopi-r6c]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-nanopi-r6c]="FriendlyELEC NanoPi R6C"
+
+BOARD_DEFCONFIGS[rk3588-nanopi-m6]="nanopi-m6-rk3588_defconfig"
+BOARD_PLATS[rk3588-nanopi-m6]="rk3588"
+BOARD_DDR_BLOBS[rk3588-nanopi-m6]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-nanopi-m6]="FriendlyELEC NanoPi M6"
+
+BOARD_DEFCONFIGS[rk3588-nanopct6]="nanopct6-rk3588_defconfig"
+BOARD_PLATS[rk3588-nanopct6]="rk3588"
+BOARD_DDR_BLOBS[rk3588-nanopct6]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-nanopct6]="FriendlyELEC NanoPC T6"
+
+BOARD_DEFCONFIGS[rk3588-nanopct6-lts]="nanopct6-lts-rk3588_defconfig"
+BOARD_PLATS[rk3588-nanopct6-lts]="rk3588"
+BOARD_DDR_BLOBS[rk3588-nanopct6-lts]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-nanopct6-lts]="FriendlyELEC NanoPC T6 LTS"
+
+BOARD_DEFCONFIGS[rk3588-roc-pc]="roc-pc-rk3588s_defconfig"
+BOARD_PLATS[rk3588-roc-pc]="rk3588"
+BOARD_DDR_BLOBS[rk3588-roc-pc]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-roc-pc]="Station P3/ROC-PC"
+
+BOARD_DEFCONFIGS[rk3588-station-m3]="station-m3-rk3588s_defconfig"
+BOARD_PLATS[rk3588-station-m3]="rk3588"
+BOARD_DDR_BLOBS[rk3588-station-m3]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-station-m3]="Station M3"
+
+BOARD_DEFCONFIGS[rk3588-bananapi-m7]="bananapi-m7-rk3588_defconfig"
+BOARD_PLATS[rk3588-bananapi-m7]="rk3588"
+BOARD_DDR_BLOBS[rk3588-bananapi-m7]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-bananapi-m7]="Banana Pi M7"
+
+BOARD_DEFCONFIGS[rk3588-bananapi-m5pro]="bananapi-m5-pro-rk3588_defconfig"
+BOARD_PLATS[rk3588-bananapi-m5pro]="rk3588"
+BOARD_DDR_BLOBS[rk3588-bananapi-m5pro]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-bananapi-m5pro]="Banana Pi M5 Pro"
+
+BOARD_DEFCONFIGS[rk3588-khadas-edge2]="khadas-edge2-rk3588_defconfig"
+BOARD_PLATS[rk3588-khadas-edge2]="rk3588"
+BOARD_DDR_BLOBS[rk3588-khadas-edge2]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-khadas-edge2]="Khadas Edge 2"
+
+BOARD_DEFCONFIGS[rk3588-turing-rk1]="turing-rk1-rk3588_defconfig"
+BOARD_PLATS[rk3588-turing-rk1]="rk3588"
+BOARD_DDR_BLOBS[rk3588-turing-rk1]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-turing-rk1]="Turing RK1"
+
+BOARD_DEFCONFIGS[rk3588-mixtile-blade3]="mixtile-blade3-rk3588_defconfig"
+BOARD_PLATS[rk3588-mixtile-blade3]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mixtile-blade3]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mixtile-blade3]="Mixtile Blade 3"
+
+BOARD_DEFCONFIGS[rk3588-mixtile-core3588e]="mixtile-core3588e-rk3588_defconfig"
+BOARD_PLATS[rk3588-mixtile-core3588e]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mixtile-core3588e]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mixtile-core3588e]="Mixtile Core 3588E"
+
+BOARD_DEFCONFIGS[rk3588-mixtile-edge2]="mixtile-edge2-rk3588_defconfig"
+BOARD_PLATS[rk3588-mixtile-edge2]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mixtile-edge2]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mixtile-edge2]="Mixtile Edge 2"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58x]="mekotronics-r58x-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58x]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58x]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58x]="Mekotronics R58X"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58x-pro]="mekotronics-r58x-pro-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58x-pro]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58x-pro]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58x-pro]="Mekotronics R58X Pro"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58x-4g]="mekotronics-r58x-4g-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58x-4g]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58x-4g]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58x-4g]="Mekotronics R58X 4G"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58hd]="mekotronics-r58hd-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58hd]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58hd]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58hd]="Mekotronics R58HD"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58s2]="mekotronics-r58s2-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58s2]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58s2]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58s2]="Mekotronics R58S2"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58-4x4]="mekotronics-r58-4x4-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58-4x4]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58-4x4]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58-4x4]="Mekotronics R58X-4x4"
+
+BOARD_DEFCONFIGS[rk3588-mekotronics-r58-minipc]="mekotronics-r58-minipc-rk3588_defconfig"
+BOARD_PLATS[rk3588-mekotronics-r58-minipc]="rk3588"
+BOARD_DDR_BLOBS[rk3588-mekotronics-r58-minipc]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-mekotronics-r58-minipc]="Mekotronics R58 MiniPC"
+
+BOARD_DEFCONFIGS[rk3588-radxa-nio-12l]="radxa-nio-12l-rk3588_defconfig"
+BOARD_PLATS[rk3588-radxa-nio-12l]="rk3588"
+BOARD_DDR_BLOBS[rk3588-radxa-nio-12l]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-radxa-nio-12l]="Radxa NIO 12L"
+
+BOARD_DEFCONFIGS[rk3588-retroidpocket-rp5]="retroidpocket-rp5-rk3588_defconfig"
+BOARD_PLATS[rk3588-retroidpocket-rp5]="rk3588"
+BOARD_DDR_BLOBS[rk3588-retroidpocket-rp5]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-retroidpocket-rp5]="Retroid Pocket RP5"
+
+BOARD_DEFCONFIGS[rk3588-retroidpocket-rpmini]="retroidpocket-rpmini-rk3588_defconfig"
+BOARD_PLATS[rk3588-retroidpocket-rpmini]="rk3588"
+BOARD_DDR_BLOBS[rk3588-retroidpocket-rpmini]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-retroidpocket-rpmini]="Retroid Pocket RPmini"
+
+BOARD_DEFCONFIGS[rk3588-fxblox-rk1]="fxblox-rk1-rk3588_defconfig"
+BOARD_PLATS[rk3588-fxblox-rk1]="rk3588"
+BOARD_DDR_BLOBS[rk3588-fxblox-rk1]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-fxblox-rk1]="FxBlox RK1"
+
+BOARD_DEFCONFIGS[rk3588-gateway-dk]="gateway-dk-rk3588_defconfig"
+BOARD_PLATS[rk3588-gateway-dk]="rk3588"
+BOARD_DDR_BLOBS[rk3588-gateway-dk]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-gateway-dk]="Gateway DK"
+
+BOARD_DEFCONFIGS[rk3588-imb3588]="imb3588-rk3588_defconfig"
+BOARD_PLATS[rk3588-imb3588]="rk3588"
+BOARD_DDR_BLOBS[rk3588-imb3588]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-imb3588]="iMB3588"
+
+BOARD_DEFCONFIGS[rk3588-photonicat2]="photonicat2-rk3588_defconfig"
+BOARD_PLATS[rk3588-photonicat2]="rk3588"
+BOARD_DDR_BLOBS[rk3588-photonicat2]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-photonicat2]="Photonicat 2"
+
+BOARD_DEFCONFIGS[rk3588-dg-svr-865-tiny]="dg-svr-865-tiny-rk3588_defconfig"
+BOARD_PLATS[rk3588-dg-svr-865-tiny]="rk3588"
+BOARD_DDR_BLOBS[rk3588-dg-svr-865-tiny]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-dg-svr-865-tiny]="DG SVR-865 Tiny"
+
+BOARD_DEFCONFIGS[rk3588-cyber-aib]="cyber-aib-rk3588_defconfig"
+BOARD_PLATS[rk3588-cyber-aib]="rk3588"
+BOARD_DDR_BLOBS[rk3588-cyber-aib]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-cyber-aib]="Cyber AIB RK3588"
+
+BOARD_DEFCONFIGS[rk3588-coolpi-genbook]="coolpi-genbook-rk3588_defconfig"
+BOARD_PLATS[rk3588-coolpi-genbook]="rk3588"
+BOARD_DDR_BLOBS[rk3588-coolpi-genbook]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-coolpi-genbook]="CoolPi GenBook"
+
+BOARD_DEFCONFIGS[rk3588-youyeetoo-yy3588]="youyeetoo-yy3588-rk3588_defconfig"
+BOARD_PLATS[rk3588-youyeetoo-yy3588]="rk3588"
+BOARD_DDR_BLOBS[rk3588-youyeetoo-yy3588]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-youyeetoo-yy3588]="Youyeetoo YY3588"
+
+BOARD_DEFCONFIGS[rk3588-indiedroid-nova]="indiedroid-nova-rk3588s_defconfig"
+BOARD_PLATS[rk3588-indiedroid-nova]="rk3588"
+BOARD_DDR_BLOBS[rk3588-indiedroid-nova]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-indiedroid-nova]="Indiedroid Nova"
+
+BOARD_DEFCONFIGS[rk3588-firefly-itx-3588j]="firefly-itx-3588j-rk3588_defconfig"
+BOARD_PLATS[rk3588-firefly-itx-3588j]="rk3588"
+BOARD_DDR_BLOBS[rk3588-firefly-itx-3588j]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-firefly-itx-3588j]="Firefly ITX-3588J"
+
+BOARD_DEFCONFIGS[rk3588-armsom-cm5-io]="armsom-cm5-io-rk3588_defconfig"
+BOARD_PLATS[rk3588-armsom-cm5-io]="rk3588"
+BOARD_DDR_BLOBS[rk3588-armsom-cm5-io]="rk3588_ddr_lp4_2112MHz_lp5_2736MHz_v1.15.bin"
+BOARD_DESC[rk3588-armsom-cm5-io]="ArmSoM CM5 IO"
+
+# ======== RK3399 (双核A72+四核A53, Mali-T860) ========
+BOARD_DEFCONFIGS[rk3399-generic]="generic-rk3399_defconfig"
+BOARD_PLATS[rk3399-generic]="rk3399"
+BOARD_DDR_BLOBS[rk3399-generic]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-generic]="RK3399 Generic"
+
+BOARD_DEFCONFIGS[rk3399-rockpro64]="rockpro64-rk3399_defconfig"
+BOARD_PLATS[rk3399-rockpro64]="rk3399"
+BOARD_DDR_BLOBS[rk3399-rockpro64]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-rockpro64]="PINE64 RockPro64"
+
+BOARD_DEFCONFIGS[rk3399-rockpi4b]="rock-pi-4b-rk3399_defconfig"
+BOARD_PLATS[rk3399-rockpi4b]="rk3399"
+BOARD_DDR_BLOBS[rk3399-rockpi4b]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-rockpi4b]="Radxa Rock Pi 4B"
+
+BOARD_DEFCONFIGS[rk3399-rockpi4a]="rock-pi-4a-rk3399_defconfig"
+BOARD_PLATS[rk3399-rockpi4a]="rk3399"
+BOARD_DDR_BLOBS[rk3399-rockpi4a]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-rockpi4a]="Radxa Rock Pi 4A"
+
+BOARD_DEFCONFIGS[rk3399-rockpi4bplus]="rock-pi-4bplus-rk3399_defconfig"
+BOARD_PLATS[rk3399-rockpi4bplus]="rk3399"
+BOARD_DDR_BLOBS[rk3399-rockpi4bplus]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-rockpi4bplus]="Radxa Rock Pi 4B+"
+
+BOARD_DEFCONFIGS[rk3399-rockpi4c]="rock-pi-4c-rk3399_defconfig"
+BOARD_PLATS[rk3399-rockpi4c]="rk3399"
+BOARD_DDR_BLOBS[rk3399-rockpi4c]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-rockpi4c]="Radxa Rock Pi 4C"
+
+BOARD_DEFCONFIGS[rk3399-rockpi4cplus]="rock-pi-4cplus-rk3399_defconfig"
+BOARD_PLATS[rk3399-rockpi4cplus]="rk3399"
+BOARD_DDR_BLOBS[rk3399-rockpi4cplus]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-rockpi4cplus]="Radxa Rock Pi 4C+"
+
+BOARD_DEFCONFIGS[rk3399-nanopim4]="nanopi-m4-rk3399_defconfig"
+BOARD_PLATS[rk3399-nanopim4]="rk3399"
+BOARD_DDR_BLOBS[rk3399-nanopim4]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-nanopim4]="FriendlyELEC NanoPi M4"
+
+BOARD_DEFCONFIGS[rk3399-nanopim4v2]="nanopi-m4v2-rk3399_defconfig"
+BOARD_PLATS[rk3399-nanopim4v2]="rk3399"
+BOARD_DDR_BLOBS[rk3399-nanopim4v2]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-nanopim4v2]="FriendlyELEC NanoPi M4 V2"
+
+BOARD_DEFCONFIGS[rk3399-nanopineo4]="nanopi-neo4-rk3399_defconfig"
+BOARD_PLATS[rk3399-nanopineo4]="rk3399"
+BOARD_DDR_BLOBS[rk3399-nanopineo4]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-nanopineo4]="FriendlyELEC NanoPi Neo4"
+
+BOARD_DEFCONFIGS[rk3399-nanopct4]="nanopct4-rk3399_defconfig"
+BOARD_PLATS[rk3399-nanopct4]="rk3399"
+BOARD_DDR_BLOBS[rk3399-nanopct4]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-nanopct4]="FriendlyELEC NanoPC T4"
+
+BOARD_DEFCONFIGS[rk3399-orangepi-rk3399]="orangepi-rk3399_defconfig"
+BOARD_PLATS[rk3399-orangepi-rk3399]="rk3399"
+BOARD_DDR_BLOBS[rk3399-orangepi-rk3399]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-orangepi-rk3399]="Orange Pi RK3399"
+
+BOARD_DEFCONFIGS[rk3399-orangepi4]="orangepi-4-rk3399_defconfig"
+BOARD_PLATS[rk3399-orangepi4]="rk3399"
+BOARD_DDR_BLOBS[rk3399-orangepi4]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-orangepi4]="Orange Pi 4"
+
+BOARD_DEFCONFIGS[rk3399-orangepi4-lts]="orangepi-4-lts-rk3399_defconfig"
+BOARD_PLATS[rk3399-orangepi4-lts]="rk3399"
+BOARD_DDR_BLOBS[rk3399-orangepi4-lts]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-orangepi4-lts]="Orange Pi 4 LTS"
+
+BOARD_DEFCONFIGS[rk3399-firefly]="firefly-rk3399_defconfig"
+BOARD_PLATS[rk3399-firefly]="rk3399"
+BOARD_DDR_BLOBS[rk3399-firefly]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-firefly]="Firefly RK3399"
+
+BOARD_DEFCONFIGS[rk3399-firefly-rk3399-roc-pc]="roc-rk3399-pc-rk3399_defconfig"
+BOARD_PLATS[rk3399-firefly-rk3399-roc-pc]="rk3399"
+BOARD_DDR_BLOBS[rk3399-firefly-rk3399-roc-pc]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-firefly-rk3399-roc-pc]="Firefly ROC-RK3399-PC"
+
+BOARD_DEFCONFIGS[rk3399-khadas-edge]="khadas-edge-rk3399_defconfig"
+BOARD_PLATS[rk3399-khadas-edge]="rk3399"
+BOARD_DDR_BLOBS[rk3399-khadas-edge]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-khadas-edge]="Khadas Edge"
+
+BOARD_DEFCONFIGS[rk3399-tinker-board-2]="tinker-board-2-rk3399_defconfig"
+BOARD_PLATS[rk3399-tinker-board-2]="rk3399"
+BOARD_DDR_BLOBS[rk3399-tinker-board-2]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-tinker-board-2]="ASUS Tinker Board 2"
+
+BOARD_DEFCONFIGS[rk3399-tinker-edge-r]="tinker-edge-r-rk3399_defconfig"
+BOARD_PLATS[rk3399-tinker-edge-r]="rk3399"
+BOARD_DDR_BLOBS[rk3399-tinker-edge-r]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-tinker-edge-r]="ASUS Tinker Edge R"
+
+BOARD_DEFCONFIGS[rk3399-fine3399]="fine3399-rk3399_defconfig"
+BOARD_PLATS[rk3399-fine3399]="rk3399"
+BOARD_DDR_BLOBS[rk3399-fine3399]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-fine3399]="Fine3399"
+
+BOARD_DEFCONFIGS[rk3399-helios64]="helios64-rk3399_defconfig"
+BOARD_PLATS[rk3399-helios64]="rk3399"
+BOARD_DDR_BLOBS[rk3399-helios64]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-helios64]="Kobol Helios64"
+
+BOARD_DEFCONFIGS[rk3399-station-p1]="station-p1-rk3399_defconfig"
+BOARD_PLATS[rk3399-station-p1]="rk3399"
+BOARD_DDR_BLOBS[rk3399-station-p1]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-station-p1]="Station P1"
+
+BOARD_DEFCONFIGS[rk3399-station-p2]="station-p2-rk3399_defconfig"
+BOARD_PLATS[rk3399-station-p2]="rk3399"
+BOARD_DDR_BLOBS[rk3399-station-p2]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-station-p2]="Station P2"
+
+BOARD_DEFCONFIGS[rk3399-station-m1]="station-m1-rk3399_defconfig"
+BOARD_PLATS[rk3399-station-m1]="rk3399"
+BOARD_DDR_BLOBS[rk3399-station-m1]="rk3399_ddr_800MHz_v1.25.bin"
+BOARD_DESC[rk3399-station-m1]="Station M1"
+
+# ======== DEFAULT ========
+DEFAULT_BOARDS=("rk3588-generic" "rk3588-rock5b" "rk3588-opi5" "rk3588-opi5plus" \
+                "rk3576-generic" "rk3576-rock4d" "rk3576-armsom-sige5" \
+                "rk3568-generic" "rk3568-rock-3a" "rk3568-nanopi-r5s" \
+                "rk3566-generic" "rk3566-rock-3c" "rk3566-orangepi-3b" \
+                "rk3399-generic" "rk3399-rockpro64" "rk3399-rockpi4b")
