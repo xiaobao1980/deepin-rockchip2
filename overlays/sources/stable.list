@@ -1,7 +1,0 @@
-# Deepin 25 Community Stable Repository
-# Official stable repository for Deepin 25 (Crimson)
-# Contains: main, commercial, community components
-# Architecture: amd64, arm64, loong64, riscv64
-
-deb https://community-packages.deepin.com/beige/ crimson main commercial community
-#deb-src https://community-packages.deepin.com/beige/ crimson main commercial community
